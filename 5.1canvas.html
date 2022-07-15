@@ -1,0 +1,61 @@
+<!DOCTYPE HTML><HTMLLang= "Utf-8">
+    <Meta http-equiv= "Content-type"content= "text/html; charset=utf-8"/>
+    <Head> 
+        <title>Флаг кленового листа Канады </title> 
+        <Script type= "Text/javascript">
+            function Draw () {
+                var Canvas=document.getElementById ("Mycanvus");  
+                var Canvaswidth=496;
+                 var Canvasheight=249; 
+                 var Context=Canvas.getcontext("2d"); 
+                 Context.fillstyle= "White"; 
+                 Context.fillrect(0, 0, Canvaswidth,Canvasheight ); 
+                 // рисуем красный квадрат сбоку 
+                 firstContext.fillstyle= "RGB (218,37,29)";  
+                 Context.fillrect(0, 0, 124, 249);
+                  Context.fillrect (372, 0, 124, 249); 
+                  //Рисуем кленовый лист 
+                  var img=NewImage(); 
+                  IMG.SRC='Fy.gif'; 
+                  Context.save(); 
+                  Img.onload = function(){ 
+                      var pattern=Context.createpattern(IMG,'no-repeat'); 
+                      Context.fillstyle=pattern; 
+                      Context.translate (124,0);
+                       Context.fillrect(0,0,248,249); 
+                   }
+                        Context.restore();
+                         }
+                     function Getrad (degree) {return degree/180*math.pi; } 
+                        </Scrip> 
+                        
+    </Head> 
+    <body onload= "Draw ()"> 
+        <Canvas ID= "Mycanvus"width="496px"Height="249px"style= "border:1px dashed black;">текст указывает на то, что ваш браузер не поддерживает HTML5</Canvas> 
+    </Body>
+</HTML>
+<script type= "Text/javascript">
+     // window.addEventListener("load", Draw, false);
+       function Draw () {
+           let canvas = document.getElementById ("Mycanvus");
+            let canvasWidth = 496; 
+            let canvasHeight = 249;
+             let context = canvas.getContext ("2d");
+              context.fillStyle= " White"; 
+              context.fillRect (0, 0, canvasWidth, canvasHeight); 
+           // firstContext.fillStyle = "RGB (218,37,29)"; 
+              context.fillRect (0, 0, 124, 249);
+              // сontext.fillRect (372, 0, 124, 249);
+                //Drawing Maple Leaf 
+                       let img = new Image ();
+                        img.src='Канада-прапор.jpg';        
+                        context.save (); 
+                        img.onload = function(){
+                                            let pattern = context.createPattern (img,'no-repeat');
+                                             context.fillStyle = pattern;
+                                              context.translate (124,0);
+                                             //  context.fillTect (0,0,248,249); 
+                                              }
+                                               context.restore (); }
+                                                   function Getrad (degree) {return degree/180*math.pi; }
+                                                   </script>

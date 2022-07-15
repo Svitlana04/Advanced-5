@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <script>
+        window.addEventListener("load", init, false);
+        function init() {
+            let canvas = document.getElementById("canvas");
+            let context = canvas.getContext("2d");
+              let Height = 249;
+              let Width = 496;
+            let gradient = context.createLinearGradient(50, 50, 200, 50);
+            gradient.addColorStop(0, "red");
+            gradient.addColorStop(0.1, "red");
+            gradient.addColorStop(0.1, "White");
+            gradient.addColorStop(0.9, "White");
+            gradient.addColorStop(0.9, "red");
+            gradient.addColorStop(1, "red");
+
+            context.fillStyle = gradient;
+          
+let img = new Image();
+img.src = "Канада-прапор.jpg";
+context.save();
+
+img.onload = function(){
+  let pattern = context.createPattern(img, "no-repeat");
+  context.fillStyle = pattern;
+  context.translate(75,50);
+  context.fillRect(0,0,248,249);
+
+}
+            context.moveTo(10, 30);
+            context.bezierCurveTo(  50, 90, 159, -30,  250, 30);
+            context.lineTo(250, 190);
+            context.bezierCurveTo(  80, 120,  95, 230, 10, 190);
+            
+            context.shadowColor = "LightGray";
+            context.shadowBlur = 15;
+
+            context.lineWidth=4;
+            context.stroke();
+            context.closePath();
+            context.fill();
+            context.restore();
+        }
+
+
+    </script>
+    <style>
+       canvas{
+            background-color: #000;
+        }
+       
+    </style>
+</head>
+<body>        
+   <canvas id="canvas" height="208" width="263"></canvas>
+    </body>
+</html>
